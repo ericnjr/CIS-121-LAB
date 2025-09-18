@@ -1,4 +1,16 @@
 # Eric Nuno
+#Question 11
+n = int(input('Enter an integer: '))
+total = 0
+for i in range (1,n + 1):
+    total += i ** 2   
+print(total)
+
+
+
+
+
+
 #Question 10
 largest_even = -1 #default is no even numbers entered
 while True:
