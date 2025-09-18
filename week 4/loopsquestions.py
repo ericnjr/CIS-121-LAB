@@ -1,13 +1,25 @@
 # Eric Nuno
+#Question 4
+word = ""
+while True:
+    user_in = input('Enter a letter: ')
+    if user_in == "done":
+        break
+    else:
+        word += user_in
+print(f'The final word is {word}')
+
+
+
+
+
+
+
+
 #Question 3
-for number in range(37, 1051):
-    if number % 2 == 0:
-        print(number)
-        
-   
-
-
-
+#for number in range(37, 1051):
+   # if number % 2 == 0:
+    #    print(number)
 
 
 #Question 2
