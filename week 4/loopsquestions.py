@@ -1,4 +1,16 @@
 # Eric Nuno
+#Question 8
+n = int(input('Enter an integer: '))
+print("Factors:", end=" ")
+for i in range(1, n+1):
+    if n % i == 0:
+        print(i, end=" ")
+print()
+
+
+
+
+
 #Question 7
 n = 25
 while True:
