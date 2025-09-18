@@ -1,4 +1,19 @@
 # Eric Nuno
+
+
+
+
+#9
+width = int(input('Enter a width: '))
+length = int(input('Enter a length: '))
+pattern = input('Enter a single character pattern: ')
+for _ in range(length):
+    print(pattern * width)
+
+
+
+
+
 #Question 8
 n = int(input('Enter an integer: '))
 print("Factors:", end=" ")
