@@ -1,4 +1,18 @@
 # Eric Nuno
+#Question 6
+
+
+
+#Question 5
+sum = 0
+for number in range(51, 518, 2):
+    sum += number
+print(sum)
+
+
+
+
+
 #Question 4
 word = ""
 while True:
