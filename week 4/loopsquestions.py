@@ -1,4 +1,18 @@
 # Eric Nuno
+#Question 10
+largest_even = -1 #default is no even numbers entered
+while True:
+    num = int(input('Enter an integer(negative to stop): '))
+    if num < 0:
+        break
+    if num % 2 == 0:
+        if num > largest_even:
+            largest_even = num
+print(largest_even)
+
+       
+
+
 
 
 
