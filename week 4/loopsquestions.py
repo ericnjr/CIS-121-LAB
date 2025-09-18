@@ -1,4 +1,20 @@
 # Eric Nuno
+#Question 7
+n = 25
+while True:
+    print(n, end= ' ')
+    if n == 1:
+        break
+    if n % 2 == 0:
+        n //= 2 
+    else: 
+        n = 3 * n + 1
+print()
+
+
+
+
+
 #Question 6
 total = 0 
 while True:
