@@ -1,5 +1,14 @@
 # Eric Nuno
 #Question 6
+total = 0 
+while True:
+    num = int(input('Enter a numbe(negative to stop): '))
+    if num < 0:
+        break
+    total += num
+print(f'The sum = {total}')
+
+
 
 
 
