@@ -109,9 +109,9 @@ print(f'The final word is {word}')
 
 
 #Question 3
-#for number in range(37, 1051):
-   # if number % 2 == 0:
-    #    print(number)
+for number in range(37, 1051):
+    if number % 2 == 0:
+       print(number)
 
 
 #Question 2
