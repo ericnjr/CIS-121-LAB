@@ -210,7 +210,7 @@ sickles = remaining_knuts // knuts_per_sickle
 knuts = remaining_knuts % knuts_per_sickle
 
 if galleons > 0:
-    print(f'{galleons} galleon{'s' if galleons >1 else ' '}')
+    print(f'{galleons} galleon{'s' if galleons > 1 else ' '}')
 if sickles > 0:
     print(f'{sickles} sickle{'s' if sickles > 1 else ' '}')
 if knuts > 0:
