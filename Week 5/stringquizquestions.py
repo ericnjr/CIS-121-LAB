@@ -5,8 +5,8 @@ def flip_flop(word):
     mid = len(word) // 2
     first_half = word[:mid]
     second_half = word[mid:]
-    return second_half +first_half
-print(flip_flop("grapes"))
+    return second_half + first_half
+print(flip_flop("abcde"))
 
 
  
@@ -104,5 +104,19 @@ print(reverse_string('hello'))
 
 
 
+
+
+    
+
+
+
+
+
+
+
+    
+        
+
+        
 
 
