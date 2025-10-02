@@ -1,4 +1,41 @@
 # examples
+# write a function that takes a string as an argument and returns a dictionary containing all of the unique words in that string.
+phonebook = {'matt':5073891438, 'ashley':12345}
+print(phonebook)
+#to add to a dictionary, we use name_of_dict[ key ] = value
+phonebook ['waters'] = 789
+print(phonebook)
+#to look up a value in a dictionary we use the name of dictionary and the key
+print(phonebook['matt'])
+#print(phonebook['martensen'])#doesn't work because not in dictionary
+for person in phonebook.keys():     #returns all of the keys as a list
+    print(person)                 #should print all of the names in the dictionary
+
+
+#write a function that takes a string as an argument, and return a list containing all of the words that have at least two vowels.
+def string_to_list_with_vowels(word):
+    words = []
+    built_word = ''
+    vowel_count = 0
+    #collect a word
+    for letter in word:
+        #print(letter, vowel_count, built_word)#can use to see where code is going wrong
+        if letter == ' ':
+            if vowel_count >= 2:
+                words.append(built_word)# adds built word into the list if the amount of vowel is >=2
+            built_word = '' 
+            vowel_count = 0  # need to add this to reset vowel count to 0
+        else:
+            built_word += letter
+            if letter in 'aeiou':
+                vowel_count +=1
+    if vowel_count >=2:
+        words.append(built_word)        
+    return words
+
+
+
+
 # write a function that takes a string as an argument and returns a list containing all of the words in that string
 my_word = 'Peter Piper picked a peck of pickled peppers'
 
@@ -18,8 +55,20 @@ def string_to_list(word):
     
 print(string_to_list(my_word))
     
-
-
+def string_to_list(word):
+    words = []
+    built_word = ''
+    for index in range(len(word)):
+        if word[index] == ' ':
+            word.append(built_word)
+            built_word = ''
+        elif index == len(word)-1:
+            built_word += word[index]
+        else:
+            built_word += word[index]
+        return words
+#print(my_word,split())
+#print(my_word.split(sep='e'))  #will split out the e from the word
 
   
 # workdays = ('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday') #immutable tuple, people can't modify this data like they can a list in []

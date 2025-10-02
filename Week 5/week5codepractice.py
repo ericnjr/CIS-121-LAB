@@ -1,3 +1,8 @@
+
+
+
+
+
 #write a function that returns the product of two arguments.
 def product(num1, num2):
     product = num1 * num2

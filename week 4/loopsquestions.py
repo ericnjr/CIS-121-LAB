@@ -125,6 +125,7 @@ print(f' Output = {result}')
 #Question 1
 larger_num = int(input('Enter the larger number: '))
 smaller_num = int(input('Enter the smaller number: '))
+num = -1
 while larger_num > smaller_num:
     larger_num /= 2
     num += 1
