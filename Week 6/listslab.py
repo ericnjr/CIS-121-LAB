@@ -12,6 +12,7 @@ print(skip_letter("banana sunday"))
 
 
 
+
 #Question 2
 def skip_letter(word):
     return[letter for letter in word[1::2]]#use slicing to start at index 1, take every 2nd character
@@ -20,7 +21,7 @@ print(skip_letter("banana sunday"))
 
 
 
-
+    
 
 
 
@@ -33,7 +34,6 @@ def output_evens(smaller, larger):
             evens.append(number)
     return evens
 print(output_evens(37, 1050))
-
 
 
 
@@ -64,7 +64,6 @@ print(output_odd(37, 1050))
 
 
 
-
 #Question 5
 def hailstone_seq(number):
     sequence = [number]
@@ -85,6 +84,9 @@ print(hailstone_seq(25))
 
 
 
+
+
+
 #Question 6
 def find_factors(number):
     factors = []
@@ -95,12 +97,6 @@ def find_factors(number):
 print(find_factors(12))
 print(find_factors(17))
 print(find_factors(36))
-
-
-
-
-
-
 
 
 
@@ -148,7 +144,7 @@ print(descending_order(2, 45, 4))
 
 
 
-#Question 9
+#Question 9 
 def count(cards):
     values = {
         2: 1, 3: 1, 4: 1, 5: 1, 6: 1,   # low cards  #dictionary
@@ -164,6 +160,7 @@ def count(cards):
 print(count([5, 9, 10, 3, "j", "a", 4, 8, 5]))      
 print(count(["a", "a", "k", "q", "q", "j"]))        
 print(count(["a", 5, 5, 2, 6, 2, 3, 8, 9, 7]))
+
 
 
 
@@ -196,11 +193,12 @@ print(war_of_numbers([2, 10, 22, 243]))
 
 
 
+    
 
 
 
 
-#Question 11
+#Question 11 ###############
 def add_lists(lyst1, lyst2):
     result = []
     for i in range(len(lyst1)):
@@ -209,13 +207,6 @@ def add_lists(lyst1, lyst2):
 print(add_lists([1, 3, 3, 1], [4, 3, 6, 1]))      
 print(add_lists([1, 8, 5, 0, -7], [0, -7, 4, 2, -6])) 
 print(add_lists([1, 2], [-1, 1])) 
-
-
-
-
-
-
-
 
 
 
@@ -234,8 +225,6 @@ def largest_even(numbers):
 print(largest_even([3, 7, 2, 1, 7, 9, 10, 13]))  
 print(largest_even([1, 3, 5, 7]))                
 print(largest_even([0, 19, 18973623]))
-
-
 
 
 
@@ -262,7 +251,10 @@ print(largest_odd([0, 19, 18973623]))
 
 
 
-#Question 14
+
+
+
+#Question 14 ##################
 def progress_days(miles):
     count = 0
     for i in range(1,len(miles)):
@@ -281,7 +273,9 @@ print(progress_days([9, 9]))
 
 
 
-#Question 15
+
+
+#Question 15 #############
 def lag_days(miles):
     count = 0
     for i in range(1,len(miles)):
@@ -299,9 +293,7 @@ print(lag_days([9, 9]))
 
 
 
-
-
-#Question 16
+#Question 16 #################
 def like_or_dislike(events):
     state = "nothing"
     for event in events:
@@ -321,10 +313,7 @@ print(like_or_dislike(["like", "dislike", "dislike"]))
 
 
 
-
-
-
-#Question 17
+#Question 17  ###########
 def get_indices(lst, item):
     indices = []
     for i, value in enumerate(lst):
@@ -335,9 +324,6 @@ print(get_indices([1, 5, 5, 2, 7], 7))
 print(get_indices([1, 5, 5, 2, 7], 5))          
 print(get_indices([1, 5, 5, 2, 7], 8))         
 print(get_indices(["a","a","b","a","b","a"], "a")) 
-
-
-
 
 
 
@@ -365,10 +351,7 @@ print(list_of_multiples(17, 6))
 
 
 
-
-
-
-#Question 19
+#Question 19  ##############
 def is_acronym(s, words):
     if len(s) != len(words):   # sees if the lengths match, abc, apples bananas, carrots
         return False

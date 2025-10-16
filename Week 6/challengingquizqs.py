@@ -90,7 +90,6 @@ print(lag_days([9, 9]))
 
 
 
-
 #Question 11 ###############
 def add_lists(lyst1, lyst2):
     result = []
@@ -100,6 +99,13 @@ def add_lists(lyst1, lyst2):
 print(add_lists([1, 3, 3, 1], [4, 3, 6, 1]))      
 print(add_lists([1, 8, 5, 0, -7], [0, -7, 4, 2, -6])) 
 print(add_lists([1, 2], [-1, 1])) 
+
+
+
+
+
+
+
 
 
 
@@ -119,4 +125,15 @@ print(like_or_dislike(["dislike"]))
 print(like_or_dislike(["like", "like"]))         
 print(like_or_dislike(["dislike", "like"]))         
 print(like_or_dislike(["like", "dislike", "dislike"]))
+
+
+
+
+
+
+
+        
+
+
+
 

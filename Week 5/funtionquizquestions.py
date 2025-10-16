@@ -1,4 +1,5 @@
-#Question 25
+
+#Question 24
 def skip_lettet(word):
     result = ""
     for i in range(1, len(word)-1, 2):
@@ -16,6 +17,20 @@ def odd_sum(smaller_num, larger_num):
     return sum 
 print(odd_sum(0, 7))
 
+
+#Question 29
+def sum_loop():
+    sum = 0
+    while True:
+        user_number = int(input('Enter a number or type a negative to end: '))
+        if user_number < 0:
+            break
+        else:
+            sum += user_number
+    return sum
+print(f'The total sum is: {sum_loop()}')
+
+
 #Question 30
 def hailstone_seq(n):
     sequence = []
@@ -30,7 +45,14 @@ def hailstone_seq(n):
     return sequence
 print(hailstone_seq(25))
 
-
+#Question 31
+def find_factors(number):
+    factors = []
+    for i in range(1, number +1):
+        if number % i == 0:
+            factors.append(i)
+    return factors
+print(find_factors(12))
 # Question 34
 def cube_sum(n):
     sum = 0
@@ -42,27 +64,10 @@ print(cube_sum(3))
 
 
 
-#Question 31
-def find_factors(number):
-    factors = []
-    for i in range(1, number +1):
-        if number % i == 0:
-            factors.append(i)
-    return factors
-print(find_factors(12))
 
 
-#Question 29
-def sum_loop():
-    sum = 0
-    while True:
-        user_number = int(input('Enter a number or type a negative to end: '))
-        if user_number < 0:
-            break
-        else:
-            sum += user_number
-    return sum
-print(f'The total sum is: {sum_loop()}')
+
+
 
 
 
@@ -182,13 +187,13 @@ def pool_times(grade, time):
             pool_time = "9am"
         else:
             pool_time = "1pm"
-    elif grade( 4 < int(grade <=8)):
-        if(time == "morning"):
+    elif  4 <= int(grade) <=8:
+        if time == "morning":
             pool_time = "10am"
         else:
             pool_time = "2pm"
-    elif grade(9 < int(grade) <= 12):
-        if(time == "morning"):
+    elif 9 <= int(grade) <= 12:
+        if time == "morning":
             pool_time = "11am"
         else:
             pool_time = " 3pm"
@@ -203,7 +208,7 @@ def convert_knuts(knuts):
 
     #1. for the number of knuts that i have how many galleons can i buy?
     galleons = knuts // (29 * 17)
-    remaining_knuts = knuts - (galleons* (29 * 17))
+    remaining_knuts = knuts % (29*17)
     #2. remianing knuts, how many sickles can i buy?
     sickles = remaining_knuts // 29
    
@@ -221,6 +226,20 @@ def convert_knuts(knuts):
 
     return output
 print(convert_knuts(32))
+
+
+
+def pool_times(grade, time):
+    if grade == "k":
+        grade = 0
+    pool_time = ''
+    if 0 <= int(grade) <= 3:
+        if time == "Morning":
+            pool_time = '9AM'
+        else:
+            pool_time = '1PM'
+    return pool_time
+
 
 
 

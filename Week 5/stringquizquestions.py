@@ -9,9 +9,6 @@ def flip_flop(word):
 print(flip_flop("abcde"))
 
 
- 
-
-
 #Question 8
 def last_letters(sentence):
     words = sentence.split()
@@ -100,6 +97,12 @@ print(reverse_string('programming'))
 print(reverse_string('python'))
 print(reverse_string('hello'))
 
+
+
+
+
+
+        
 
 
 

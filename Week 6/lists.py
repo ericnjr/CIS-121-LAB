@@ -1,5 +1,27 @@
 # examples
-# write a function that takes a string as an argument and returns a dictionary containing all of the unique words in that string.
+# write a function that takes a string as an argument and returns a dictionary containing all of the number of times each word was used in that string
+my_words = '''there once was a traverse man who traveled very far and had an the man had an exquisite taste'''
+
+
+def string_to_dictionary(word):
+    string_as_list = word.split()
+    word_dictionary = {}
+    for word in string_to_list:
+        if word in word_dictionary:
+            word_dictionary[word] = word_dictionary[word] + 1
+        else:
+            word_dictionary[word] = 1
+    return word_dictionary
+
+print(string_to_dictionary(my_words))
+x = string_to_dictionary(my_words)
+for key in x:
+    if len(key) >8:
+        print(key)
+
+
+
+
 phonebook = {'matt':5073891438, 'ashley':12345}
 print(phonebook)
 #to add to a dictionary, we use name_of_dict[ key ] = value
@@ -10,7 +32,8 @@ print(phonebook['matt'])
 #print(phonebook['martensen'])#doesn't work because not in dictionary
 for person in phonebook.keys():     #returns all of the keys as a list
     print(person)                 #should print all of the names in the dictionary
-
+for person in phonebook.keys():    
+    print(person, phonebook[person])    # second thing return all of the phonenumbers in the dictionary     
 
 #write a function that takes a string as an argument, and return a list containing all of the words that have at least two vowels.
 def string_to_list_with_vowels(word):
