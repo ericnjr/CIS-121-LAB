@@ -36,12 +36,7 @@ print(return_unique([5, 5, 2, 4, 4, 4, 9, 9, 9, 1]))
 print(return_unique([9, 5, 6, 8, 7, 7, 1, 1, 1, 1, 1, 9, 8])) 
 
 
-def return_unique(nums):
-    unique = []
-    for num in nums:
-        if nums.count(num) == 1:
-            unique.append(num)
-    return unique
+
 
 
 
@@ -56,6 +51,7 @@ def get_names(names):
 print(get_names({"01475": "Steve", "87469": "Alice", "654123": "Bob"}))   
 print(get_names({"ID1": "John", "ID2": "Emma", "ID3": "Liam"}))   
 print(get_names({}))
+
 
 
 
@@ -80,7 +76,6 @@ print(find_oldest({"Ethan": 25, "Lucas": 30, "Mia": 29}))
 
 
 
-
 #Question 6
 def letter_count(word):
     counts = {}
@@ -93,6 +88,10 @@ def letter_count(word):
 print(letter_count("hello"))       
 print(letter_count("mississippi")) 
 print(letter_count("apple"))
+
+
+
+
 
 
 
@@ -112,14 +111,7 @@ print(min_grade({"Chemistry": 78, "Algebra": 88, "History": 72, "Geography": 85}
 print(min_grade({"Art": 90, "Music": 92, "Drama": 89})) 
 
 
-def min_grade(exams):
-    min_course = None
-    min_score = float('inf')
-    for course, grade in exams.items():
-        if grade < min_score:
-            min_course = course
-            min_score = grade
-    return min_course
+
 
 
 
@@ -152,12 +144,7 @@ reciept["Cookie"] = 3
 total = sum(reciept.values())
 print(total)
 
-reciept = {}
-reciept["Side Salad"] = 6
-reciept["Chicken Parm"] = 12
-reciept["Cookie"] = 3
-total = sum(reciept.values())
-print(total)
+
 
 
 
@@ -170,6 +157,12 @@ menu["fries"] = 4
 menu["soda"] = 3
 for item, price in menu.items():
     print(F"{item} cost {price}")
+
+
+
+
+
+
 
 
 
@@ -195,7 +188,6 @@ print(count_repetitions(["Infinity","null","Infinity","null","null"]))
 
 
 
-
 #Question 12
 def items_purchased(store, wallet):
     affordable = []
@@ -206,6 +198,9 @@ def items_purchased(store, wallet):
 print(items_purchased({"Water": 1, "Bread": 3, "TV": 1000}, 300))  
 print(items_purchased({"Apple": 4, "Pan": 100, "Spoon": 2}, 100))  
 print(items_purchased({"Phone": 999, "Laptop": 5000, "PC": 1200}, 1))
+
+
+
 
 
 
@@ -310,28 +305,24 @@ print(total_cost(["eggs", "eggs", "flour", "sugar"]))
 
 
 
-#Question 18
+#Question 18 #############
 def majority_element(nums):
-    candidate = None
-    count = 0
+    count = {}
     for num in nums:
-        if count == 0:
-            candidate = num
-            count = 1
-        elif num == candidate:
-            count += 1
-        else:
-            count -= 1
-    return candidate
-print(majority_element([3, 2, 3]))                  
-print(majority_element([2, 2, 1, 1, 1, 2, 2]))   
-print(majority_element([2, 2, 3, 2, 1, 2, 1, 4, 4, 1, 2, 2]))
+        count[num] = count.get(num, 0) + 1  # count each number
+    
+    # find the number with the highest count
+    for num, freq in count.items():
+        if freq >= len(nums) / 2:  # majority condition
+            return num
+
+# Examples:
+print(majority_element([3, 2, 3]))                 # → 3
+print(majority_element([2, 2, 1, 1, 1, 2, 2]))     # → 2
+print(majority_element([2, 2, 3, 2, 1, 2, 1, 4, 4, 1, 2, 2]))  # → 2
 
 
-
-
-
-        
+ 
 
 
 
