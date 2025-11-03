@@ -256,3 +256,100 @@ class Vector:
 vector1 = Vector(5, 9)
 
 vector1.get_magnitude()
+
+#Question 11
+class ColorRGB:
+    def __init__(self, _red, _green, _blue):
+        self.red = _red
+        self.green = _green
+        self.blue = _blue
+    def get_red(self):
+        return self.red
+    def set_red(self, _red):
+        self.red = _red
+    def get_green(self):
+        return self.green
+    def set_green(self, _green):
+        self.green = _green
+    def get_blue(self):
+        return self.blue
+    def set_blue(self, _blue):
+        self.blue = _blue
+    def to_grayscale(self):
+        value = 0.3 * self.red + 0.59 * self.green + 0.11 * self.blue
+        print(value)
+colorrgb1 = ColorRGB(120, 100, 150)
+colorrgb1.to_grayscale()
+
+#Question 12
+class TemperatureInCelsius:
+    def __init__(self, _temp_value):
+        self.temp_value = _temp_value
+    def get_temp_value(self):
+        return self.temp_value
+    def set_temp_value(self, _temp_value):
+        self.temp_value = _temp_value
+    def to_fahrenheit(self):
+        fahrenheit = ((self.temp_value * 9/5) + 32)
+        print(fahrenheit)
+temp1 = TemperatureInCelsius(30)
+temp1.to_fahrenheit()
+
+#Question 13
+class Rectangle:
+    def __init__(self, _width, _height):
+        self.width = _width
+        self.height = _height
+    def get_width(self):
+        return self.width
+    def set_width(self, _width):
+        self.width = _width
+    def get_height(self):
+        return self.height
+    def set_height(self, _height):
+        self.height = _height
+    def calculate_area(self):
+        area = self.width * self.height
+        print(area)
+rectangle1 = Rectangle(5, 10)
+rectangle1.calculate_area()
+
+#Question 14
+import math
+class Circle:
+    def __init__(self, _radius):
+        self.radius = _radius
+    def get_radius(self):
+        return self.radius
+    def set_radius(self, _radius):
+        self.radius = _radius
+    def calculate_circumference(self):
+        circumference = 2 * math.pi * self.radius
+        print(circumference)
+circle1 = Circle(5)
+circle1.calculate_circumference()
+
+#Question 15
+class Recipe:
+    def __init__(self, _name, _cooking_time):
+        self.name = _name
+        self.cooking_time = _cooking_time
+    def get_name(self):
+        return self.name
+    def set_name(self, _name):
+        self.name = _name
+    def get_cooking_time(self):
+        return self.cooking_time
+    def set_cooking_time(self, _cooking_time):
+        self.cooking_time = _cooking_time
+    def is_quick_meal(self):
+        return self.cooking_time < 30
+    
+recipe1 = Recipe("Fish", 10)
+print(recipe1.is_quick_meal())  
+
+recipe2 = Recipe("Lasagna", 45)
+print(recipe2.is_quick_meal())      
+
+
+
