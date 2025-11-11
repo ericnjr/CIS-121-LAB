@@ -1,1 +1,2 @@
 eric,Wizard,Win
+eric,Cleric,Win

@@ -58,7 +58,11 @@ class PlanetarySystem:
 
 
 
-
+if __name__ == '__main__':
+    print('hello world')
+else:
+    print("we didn't print anything")
+    
 
 
 

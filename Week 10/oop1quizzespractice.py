@@ -25,6 +25,8 @@ print(product1.get_quantity())  # 10
 
 
 
+
+
 #Question 2
 class Book:
     def __init__(self, _title, _author, _page_count):
@@ -136,12 +138,16 @@ employee1 = Employee("Eugene", "CEO", 100.00)
 employee1.greeting()
 employee1.raise_request()
 
-#Question 6
+
+
+
+#Question 6  ###########
 class Student:
     def __init__(self, _name, _major, _GPA):
         self.name = _name
         self.major = _major
         self.GPA = _GPA
+
     def get_name(self):
         return self.name
     def set_name(self, _name):
@@ -153,17 +159,27 @@ class Student:
     def get_GPA(self):
         return self.GPA
     def set_GPA(self, _GPA):
-        self.GPA = _GPA
+        self.GPA = _GPA   
+
     def introduction(self):
-        print(f"Hi, I'm {self.name}. I'm studying {self.major}")
-    def grade_point(self):
-        new_gpa = self.GPA + .2
-        print(f"I'm hitting the books! My GPA increased from {self.GPA} to {new_gpa}.")
+        print(f"Hi. I'm {self.name}. I'm studying {self.major}.")
 
+    def study_for_exam(self):
+        old_gpa = self.GPA
+        if 0.0 <= old_gpa <= 4.0:
+            new_gpa = self.GPA + 0.2
+            print(f"I'm hitting the books! My GPA increased from {old_gpa} to {new_gpa}.")
+        else:
+            print("Invalid Entry")
 student1 = Student("Michael", "MIS", 3.5)
-
 student1.introduction()
-student1.grade_point()
+student1.study_for_exam()
+
+
+
+
+
+
 
 #Question 7
 class Vehicle:
@@ -329,7 +345,7 @@ class Circle:
 circle1 = Circle(5)
 circle1.calculate_circumference()
 
-#Question 15
+#Question 15    ######
 class Recipe:
     def __init__(self, _name, _cooking_time):
         self.name = _name
