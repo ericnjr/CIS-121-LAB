@@ -176,5 +176,179 @@ dept1.show_staff_list()
 print("Is the department large enough?", dept1.is_large())
 
 
+#Question 5
+
+class Droid:
+    def __init__(self, designation, series):
+        self.designation = designation
+        self.series = series
+    def get_designation(self):
+        return self.designation
+    def set_designation(self, designation):
+        self.designation = designation
+    def get_series(self):
+        return self.series
+    def set_series(self, series):
+        self.series = series
+    def communicate(self):
+        print("Beep-Bloop-Blop")
+    def __str__(self):
+        return f"Robot(Designation: {self.designation}, Series: {self.series}"
+    
+class Starship:
+    def __init__(self, name):
+        self.name = name
+        self.droids = []
+    def add_droid(self, droid):
+        self.droids.append(droid)
+    def droids_communicate(self):
+        for droid in self.droids:
+            droid.communicate()
+    def __str__(self):
+        return f"Starship {self.name} with {len(self.droids)} droids"
+
+ship1= Starship("Millenium Falcon")
+
+droid1 = Droid("R2-D2", "cool")
+droid2 = Droid("c-3PO", "lame")
+
+ship1.add_droid(droid1)
+ship1.add_droid(droid2)
+
+print(ship1)
+ship1.droids_communicate()
 
 
+#Question 6
+class Post:
+
+    def __init__(self, caption, likes):
+        self.caption = caption
+        self.likes = likes
+    def get_likes(self):
+        return self.likes
+    def add_like(self):
+        self.likes += 1
+    def display(self):
+        print(f"Caption: {self.caption}")
+    def __str__(self):
+        return f"Post(Caption: {self.caption}, Likes: {self.likes})"
+
+class Profile:
+    def __init__(self, username):
+        self.username = username
+        self.posts = []
+    def add_post(self, post):
+        self.posts.append(post)
+    def display_trending_posts(self):
+        for post in self.posts:
+            if post.get_likes() >= 10000:
+                post.display()
+            else:
+                print("Not Trending")
+    def __str__(self):
+        return f"Profile: @{self.username} | {len(self.posts)} posts"
+    
+user_profile = Profile("Space Traveller")
+
+post1 = Post("Exploring the rings of Saturn", 15000)
+post2 = Post("Coffee on Mars", 8500)
+
+    
+user_profile.add_post(post1)
+user_profile.add_post(post2)
+print(user_profile)
+
+
+user_profile.display_trending_posts()   
+    
+#Question 7
+class Product:
+    def __init__(self, name, price):
+        self.name = name
+        self.price = price
+    def get_price(self):
+        return self.price
+    def set_price(self, price):
+        self.price = price
+    def display_details(self):
+        print(f"Name: {self.name}, Price: {self.price}")
+    def __str__(self):
+        return f"Name: {self.name}, Price: {self.price}"
+    
+class ShoppingCart:
+    def __init__(self, customer_id):
+        self.customer_id = customer_id
+        self.products = []
+    def add_product(self, product):
+        self.products.append(product)
+    def calculate_total(self):
+        total = 0
+        for product in self.products:
+            total += product.get_price()
+        print(f"Total: {total}")   
+        return total
+    def __str__(self):
+        return f"ShoppingCart for Customer #{self.customer_id} | {len(self.products)} products"   
+
+cart = ShoppingCart(12345)
+
+    
+product1 = Product("Wireless Headphones", 79.99)
+product2 = Product("Smart Watch", 149.50)
+
+cart.add_product(product1)
+cart.add_product(product2)
+
+print(cart)
+
+product1.display_details()
+product2.display_details()
+
+cart.calculate_total()
+
+
+
+
+
+#Question 12
+class TvShow:
+    def __init__(self, title, genre):
+        self.title = title
+        self.genre = genre
+    def get_genre(self):
+        return self.genre
+    def set_genre(self, genre):
+        self.genre = genre
+    def preview(self):
+        print(f"Title: {self.title}, Genre: {self.genre}")
+    def __str__(self):
+        return f"Title: {self.title}, Genre: {self.genre}"
+    
+class NetflixDashboard:
+    def __init__(self, profile_name):
+        self.profile_name = profile_name
+        self.shows = []
+    def add_show(self, show):
+        self.shows.append(show)
+    def display_recommendations(self):
+        for show in self.shows:
+            print(F"Show Recommendations: {show}")
+    def __str__(self):
+        return f"Profile Name: {self.profile_name}, Shows: {len(self.shows)}"
+
+dashboard1 = NetflixDashboard("Queezy")
+
+show1 = TvShow("Friends", "Comedy")
+show2 = TvShow("Scooby Doo", "Cartoon")
+
+dashboard1.add_show(show1)
+dashboard1.add_show(show2)
+
+print(dashboard1)
+
+dashboard1.display_recommendations()
+
+
+
+    
